@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <title>Jyotsna Mishra</title>
+          <link rel="shortcut icon" href="" />
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="style.css"></link>
+          <script src="vendor/angular.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+          <script type="text/javascript">
+                    $(document).keydown(function(event){
+                    if(event.keyCode==123){
+                    return false;
+                       }
+                    else if(event.ctrlKey && event.shiftKey && event.keyCode==73){        
+                          return false;  //Prevent from ctrl+shift+i
+                       }
+                    });
+          </script>
+    </head>
+    <body ng-app="main" > 
+        
+        <!--oncontextmenu="return false"--> 
+       <div ng-controller="mainCtrl">
+           <div class="row">
+               <div class="col-sm-4 imgContent" >
+                   <div class="row">
+                        <div class = "round-div col-sm-3">
+                            <img src="image/letterJ.png" id="letterJ" class="img-responsive">
+                        </div>
+
+                        <div class="nameContainer col-sm-9">
+                             <b class="nameTxt">Jyotsna Mishra</b>
+                        </div>
+                        <div class="col-sm-9">
+                             <b id="UIDevTxt">UI Developer</b>
+                        </div>
+                   </div>
+               </div>
+               
+               <div class="col-sm-8">
+                    <nav class="makeLeft navbar navbar-default navbar-fixed-top">
+                          <div class="container-fluid">
+                              <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                                          data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="myNavbar">
+                                    <ul class="nav navbar-nav navbar-right" >
+                                         <li><a href=""  ng-click="loadDynamicView('emailnow')">Contact</a></li>
+                                         <li><a href=""  ng-click="loadDynamicView('portfolio')">Portfolio</a></li>
+                                         <li><a href=""  ng-click="loadDynamicView('resume')">Profile</a></li>
+                                          <li><a href=""  ng-click="loadDynamicView('home')">Home </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                </div>
+                <div style="clear:both;"></div>        
+            </div>
+        </div>
+
+        <div ui-view class="view"></div>
+        
+        
+        <script src="app/home/home.js"></script>
+        <script src="app/home/homeCtrl.js"></script>
+        <script src="app/resume/resume.js"></script>
+        <script src="app/resume/resumeCtrl.js"></script>
+        <script src="app/portfolio/portfolio.js"></script>
+        <script src="app/portfolio/portfolioCtrl.js"></script>
+        <script src="app/login/login.js"></script>
+        <script src="app/login/loginCtrl.js"></script>
+        <script src="app/emailnow/emailnow.js"></script>
+        <script src="app/emailnow/emailnowCtrl.js"></script>
+        <script src="app/common/common.js"></script>
+        <script src="app/common/APP_CONSTANTS.js"></script>
+        <script src="app/customDirectives/customDirectives.js"></script>
+        <script src="app/customDirectives/custDirController.js"></script>
+        <script src="app/customDirectives/cust-dir.js"></script>
+        <script src="app/customDirectives/all-customers.js"></script>
+        <script src="app/customDirectives/use-childscope.js"></script>
+        <script src="app/search/search.js"></script>
+        <script src="app/search/searchCtrl.js"></script>
+        <script src="app/service/uService.js"></script>
+        <script src="app/main.js"></script>
+        <script src="app/mainCtrl.js"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+	"userCred": [{
+			"uid": "krishna@xyz.com",
+			"pwd": "krishna"
+		},
+
+		{
+			"uid": "jyotsna@xyz.com",
+			"pwd": "jyotsna"
+		},
+
+		{
+			"uid": "shampa@xyz.com",
+			"pwd": "shampa"
+		}
+	]
+}

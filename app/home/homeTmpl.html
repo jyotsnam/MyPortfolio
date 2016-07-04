@@ -1,0 +1,21 @@
+<div class="vidDemo">
+       <video autoplay loop preload ='auto'  poster="image/preview.jpg">
+             <embed>
+                  <source src="video/keyboardtyping.mp4" type="video/mp4" />
+                  <source src="video/keyboardtyping.ogv" type="application/ogg" />
+                  <source src="video/keyboardtyping_VP8.webm" type="video/webm" />
+                  <source src="video/keyboardtyping.mov" />
+                  <source src="video/keyboardtyping.wmv" />
+           
+                  <img id="vidImage" src="image/preview.jpg">
+             </embed>
+       </video> 
+        <div id="namaste" class="animation-rotate" >
+            <img src="image/namaste.png" >
+            <p id="welcome" class="blinkText">Welcome</p>
+            <p id="welcomeQuote">The Best Dreams Happen When You are Awake</p>
+        </div>
+        <div id="arrow" ng-controller="mainCtrl">
+            <img src="image/arrow1.png" ng-click="loadDynamicView('resume')">
+        </div>
+</div>

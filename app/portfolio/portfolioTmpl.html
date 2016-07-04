@@ -1,0 +1,214 @@
+<div class="portfolioContainer" >
+    <div class="firstRowBoxes">
+    <!--Box 1-->   
+            <div class="portBoxes" id="portbox1">
+                <div><h1 id="portBoxTitle1">AngularJS</h1> 
+                    <h4 id="portBoxDesc1" >Accessing JSON Data Using Service </h4>
+                </div>
+                <button type="button" class="btn btn-default btn-lg" id="myBtn">View</button>
+            </div> 
+        <!-- Modal -->
+            <div ng-controller="loginCtrl">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 style="color:red;"><span class="glyphicon"></span> Service Example</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form role="form">
+                            <div class="form-group">
+                              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                              <input ng-model="uname" type="text" class="form-control" id="usrname" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                              <input ng-model="pwd" type="password" class="form-control" id="psw" placeholder="Enter password">
+                            </div>
+                            <!--<div class="checkbox">
+                              <label><input type="checkbox" value="" checked>Remember me</label>
+                            </div>-->
+                            <button ng-click="verfyUser(uname, pwd)" type="submit" class="btn btn-default btn-success btn-block">
+                                <span class="glyphicon glyphicon-off"></span> Login</button>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">
+                              <span class="glyphicon glyphicon-remove"></span> Cancel
+                          </button>
+                          <p>Default value to check:</p>
+                          <p>uid-jyotsna@xyz.com ,pwd-jyotsna </p>
+                        </div>
+                  </div>
+                </div>
+          </div>
+         </div>
+
+
+    <!--Box 2-->
+        <div class="portBoxes" id="portbox2">
+             <div><h1 id="portBoxTitle1">AngularJS</h1> 
+                    <h4 id="portBoxDesc2" >Sample Custom Directives</h4>
+             </div>
+            <button type="button" class="btn btn-default btn-lg" id="myBtn2">View</button>
+        </div>
+         <!-- Modal -->
+            <div ng-controller="custDirController">
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 style="color:red;"><span class="glyphicon"></span> Custom Directives Example</h4>
+                        </div>
+                        <div class="modal-body">
+                            <cust-dir>
+                                <h3><em>Custom Directive</em> <small class="text-muted">which embeds data binding expression for an object:</small></h3>
+                                <h5><span><strong>Current Customer:</strong></span></h5>
+                            </cust-dir>
+
+                            <div>
+                                <br><h3><em>Custom Directive</em> <small class="text-muted"> which embeds the data binding expression for an array:</small></h3>
+                                <h5><span><strong>All Customers:</strong></span></h5>
+                                <div ng-repeat="cust in customers">
+                                    <all-customers name="{{cust.name}}" street="{{cust.street}}">
+
+                                    </all-customers>   
+                                </div>
+                            </div>
+
+                           <div>
+                               <br /><h3><em>Custom Directive</em> <small class="text-muted">which repeats element.</small></h3>
+                               <p> This Directive has a new <mark>child scope</mark> that prototypically inherits from parent scope.</p>
+                               <use-childscope><span>Item: {{message}}</span><br /></use-childscope>
+                           </div>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">
+                              <span class="glyphicon glyphicon-remove"></span> Cancel
+                          </button>
+                        </div>
+                  </div>
+                </div>
+          </div>
+         </div>
+
+
+
+    <!--Box 3-->    
+        <div class="portBoxes" id="portbox3">
+            <div><h1 id="portBoxTitle1">AngularJS</h1> 
+                    <h4 id="portBoxDesc2" >API Call Sample</h4>
+             </div>
+            <button type="button" class="btn btn-default btn-lg" id="myBtn3">View</button>
+        </div>
+
+        <!-- Modal -->
+            <div ng-controller="custDirController">
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 style="color:red;"><span class="glyphicon"></span>Calling Open Source API (github)</h4>
+                        </div>
+                        <div class="modal-body" ng-controller="searchCtrl">
+                            <div class="middleContent row">
+                               <section id="sectn" class="col-sm-4">
+                                    <div ng-include="searchTemplate"></div>
+                               </section>
+
+                                <aside id="sidebar" class="col-sm-8">
+                                    <div ng-show="userNotFound">
+                                        <h2 id="noUser">No User Info Found</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12" ng-hide="userNotFound">
+                                            <div ng-show="loaded">
+                                                <div class="ghcontent">
+                                                     <div class="avi">
+                                                        <a href="{{ user.html_url }}" target="_blank">
+                                                        <img id="API_img" src="{{ user.avatar_url }}"  alt="{{ user.login }}">
+                                                        </a>
+                                                     </div>
+
+                                                      <h2 ng-bind="user.name" id="usrnm"> 
+                                                         <span class="smallname">
+                                                             (@<a href="{{user.html_url}}" target="_blank"> {{user.login}} </a>)
+                                                         </span>
+                                                      </h2>
+                                                      <div class="cl">
+                                                      <p> Followers: {{ user.followers }} - Following: {{ user.following }} ,
+                                                      Repos: {{ user.public_repos }}</p>
+                                                      </div>
+                                                </div>
+                                                <div class="repolist">
+                                                    <p id="API_PortPara" ng-hide="reposFound">No repos!</p>
+                                                    <div ng-show="reposFound">
+                                                        <p id="API_PortPara"><strong>Repos List:</strong></p>
+                                                        <ul ng-repeat="repo in repos">
+                                                           <li>
+                                                               <a id="API_PortA" href="{{repo.html_url}}" target="_blank">
+                                                                   {{repo.name}} </a>
+                                                           </li>
+                                                        </ul>
+                                                     </div>
+                                                </div>
+                                          </div>
+                                        </div>
+                                        <div id="toclr"></div>
+                                      <!-- <div class="col-sm-6" ng-hide="userNotFound">
+                                            <div ng-show="isSortedData" class="repoShow">
+                                               <div ng-repeat="data in sortedData" class="sortedContainer">
+                                                   <span ng-bind="data.key" class="leftSpan"></span>
+                                                   <span> : {{data.name}}</span>
+                                               </div>
+                                            </div>
+                                       </div>-->
+                                       <div class="cl"></div>
+                                    </div>
+                                </aside>
+                            </div>
+
+                            <div class="cl"></div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">
+                              <span class="glyphicon glyphicon-remove"></span> Cancel
+                          </button>
+                          <p><strong>Enter any Github username in textbox and click search</strong></p>
+                          <p>This will search github for entered username</p>
+                        </div>
+                  </div>
+                </div>
+          </div>
+         </div>   
+        <div style="clear:both;"></div>
+      </div>
+</div>
+<script>
+$(document).ready(function(){
+    setTimeout(function(){$('.firstRowBoxes')}, 600);
+        $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+     $("#myBtn2").click(function(){
+        $("#myModal2").modal();
+    });
+    $("#myBtn3").click(function(){
+        $("#myModal3").modal();
+    });
+});
+
+/*$(document).ready(function() {
+    setTimeout(function() { $('#initiallyHiddenBlock').show() }, 600);
+});*/
+</script>

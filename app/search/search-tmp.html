@@ -1,0 +1,16 @@
+<div class="form-horizontal">
+   <div class="form-group">
+    <div class="col-sm-12">
+     <input type="text" class="form-control" ng-model="username" placeholder="Github username">
+    </div>
+    <div class="cl">
+    <div class="col-sm-4">
+    <a href="#" ng-click="findUser(username)" class="btn btn-primary" id="srchBtn">Search</a> </div>
+    </div>
+    </div>
+</div>
+<script>
+$("#srchBtn").on("click", function(e) {
+    e.preventDefault();
+});
+</script>
